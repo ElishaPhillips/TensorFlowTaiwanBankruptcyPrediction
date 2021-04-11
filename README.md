@@ -116,11 +116,11 @@
 
 #### Initial model
 ##### I made a simple 3 layer sequential model to train my dataset on. 
- 
-   > model = Sequential()
-   > model.add(Dense(units=32, activation='relu', input_dim=len(X_train.columns)))
-   > model.add(Dense(units=64, activation='relu'))
-   > model.add(Dense(units=1, activation='sigmoid'))
+
+> ##### model = Sequential()
+> ##### model.add(Dense(units=32, activation='relu', input_dim=len(X_train.columns)))
+> ##### model.add(Dense(units=64, activation='relu'))
+> ##### model.add(Dense(units=1, activation='sigmoid'))
 
  
 ##### I fit my model with a binary crossentropy loss function for classification.
