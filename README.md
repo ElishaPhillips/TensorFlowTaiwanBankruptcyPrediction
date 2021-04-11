@@ -128,4 +128,5 @@
 #### Results:
 ##### With 500 epochs I reached 96.7% accuracy, not bad for a benchmark
 
-### Improving the model: The current goal is to improve the accuracy to over 99%, I can tune hyperparameters with Keras Tuner and try to design a better fitting model. Let's do this! 
+#### Improvemt: 
+#### The current goal is to improve the accuracy to over 99%, I can tune hyperparameters with Keras Tuner and try to design a better fitting model. Let's do this! 
