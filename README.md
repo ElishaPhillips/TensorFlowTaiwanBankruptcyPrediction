@@ -1,19 +1,10 @@
-### Predictive Analysis with Tensorflow in Python: Taiwan Bankruptcy Dataset
-
-##### Source: 
-
-
-
 # Performing Predictive Analysis for Predicting Company Bankruptcy 
 ### With TensorFlow in Python with JupyterLab
 
 ####  Source
-This dataset was pulled from Kaggle, and comprises a set of nuclei features for breast tumor diagnosis. 
 
-Source and feature details:
 >[Kaggle/Taiwan Economic Journal](https://www.kaggle.com/fedesoriano/company-bankruptcy-prediction)
 >The data was collected from the Taiwan Economic Journal for the years 1999 to 2009. Company bankruptcy was defined based on the business regulations of the Taiwan Stock Exchange.
-
 
 <details>
   <summary>Attribute Information:</summary>
@@ -118,4 +109,23 @@ Source and feature details:
 
 </details>
 
-##### Initial Testing:
+### Initial Testing:
+
+#### Processing Steps
+##### The column names are long, I reindexed them to a series of integers from 0 to 95 to make processing easier. I split off the bankruptcy value for bankruptcy into a y dataset, and pushed the remaining columns into an x dataset for training. 
+
+#### Initial model
+##### I made a simple 3 layer sequential model to train my dataset on. 
+ 
+   > model = Sequential()
+   > model.add(Dense(units=32, activation='relu', input_dim=len(X_train.columns)))
+   > model.add(Dense(units=64, activation='relu'))
+   > model.add(Dense(units=1, activation='sigmoid'))
+
+ 
+##### I fit my model with a binary crossentropy loss function for classification.
+
+#### Results:
+##### With 500 epochs I reached 96.7% accuracy, not bad for a benchmark
+
+### Improving the model: The current goal is to improve the accuracy to over 99%, I can tune hyperparameters with Keras Tuner and try to design a better fitting model. 
